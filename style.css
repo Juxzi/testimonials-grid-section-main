@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color:hsl(0, 0%, 81%) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+gap: 30px;
+min-width: 1032px;
+max-width: 1032px;
+margin: 5%;
+
+}
+*{
+    font-family: "Barlow Semi Condensed";
+}
+p{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 70%;
+    line-height: 20px;
+}
+img{position: relative;
+    border-radius: 100%;
+border: solid;
+transform: scale(0.8);
+}
+
+h1{
+    color: hsl(210, 46%, 95%);
+    font-size: 15px;
+    align-self:end;
+    font-weight: 600;
+    line-height: 15px;
+}
+span{
+    font-size: 13px;
+   opacity: 50%;
+    font-weight: 500;   
+    
+}
+.danielcard{
+    order: -1;
+grid-column: 1/3;
+background-color: hsl(263, 55%, 52%) ;
+background-image: url(images/bg-pattern-quotation.svg);
+background-repeat: no-repeat;
+background-position: 80% 0;
+border-radius: 10px;
+padding: 20px;
+
+}
+.danielcard img{
+border:solid  hsl(263, 51%, 37%)  ;
+}
+.danielcard p{
+    color:hsl(210, 46%, 95%);
+}
+.danielcard h3{color: hsl(210, 46%, 95%);}
+
+.top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    justify-content:left ;
+    align-items: center;    
+    gap: 0 10px ;
+    
+    
+}
+.top img{
+    grid-row: 1/3;
+    align-self: center;
+    width: 40px;
+
+}
+
+.jonathancard{
+    order: 0;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.jonathancard p{color: hsl(210, 46%, 95%);}
+.jonathancard img{border: solid hsl(210, 46%, 95%);}
+.jonathancard h3{color: hsl(210, 46%, 95%);}
+
+.jeanettecard{
+    order: 3;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  color:hsl(217, 19%, 35%) ;
+}
+.jeanettecard h1{color: hsl(217, 19%, 35%);}
+.jeanettecard img{border: none;}
+.jeanettecard p{ margin-top: 40px;}
+.patrickcard{
+    order: 4;
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2/4;
+    border-radius: 10px;
+    padding: 20px;
+}
+.patrickcard h3{color:hsl(210, 46%, 95%);}
+.patrickcard p{color: hsl(210, 46%, 95%);}
+.patrickcard img{border:solid  hsl(263, 51%, 37%) }
+.kiracard{
+    order: 1;
+    background-color: #fff;
+    grid-column: 4;
+    grid-row: 1/3;
+    border-radius: 10px;
+    padding: 20px;
+}
+.kiracard h1{color: hsl(217, 19%, 35%)}
+.kiracard h3{color: hsl(217, 19%, 35%)}
+.kiracard p{color: hsl(217, 19%, 35%)}
+.kiracard img{border: none;}
+
+@media screen and (max-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-width: 200px;
+        max-width: 500px;
+        
+    gap: 20px;
+
+    margin: 5%;
+}
+.danielcard{grid-column: 1;
+grid-row: 0;}
+.danielcard{background-position: 90% 0;}
+.patrickcard{grid-column: 1;}
+.jeanettecard{grid-row: 3;}
+.patrickcard{grid-row: 4;}
+.kiracard{grid-column: 1;
+grid-row: 5;}
+}
